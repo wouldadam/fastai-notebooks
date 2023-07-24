@@ -1,0 +1,28 @@
+{
+	"name": "pytorch",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"runArgs": [
+		"--gpus",
+		"all",
+		"--ulimit",
+		"memlock=-1",
+		"--ulimit",
+		"stack=67108864",
+		"--shm-size=8g"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"streetsidesoftware.code-spell-checker",
+				"shardulm94.trailing-spaces"
+			]
+		}
+	}
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
