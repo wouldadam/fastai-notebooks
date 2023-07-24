@@ -6,10 +6,11 @@ ARG USER_GID=$USER_UID
 
 ENV FASTAI_HOME=/workspaces/fastai/.fastai
 ENV TORCH_HOME=/workspaces/fastai/.torch
+ENV PRE_COMMIT_HOME=/workspaces/fastai/.precommit
 
 # Install python libs
 RUN pip install fastai nbdev fastbook ipywidgets
-RUN pip install black flake8
+RUN pip install black flake8 pre-commit
 
 # Create a non-root user with sudo
 RUN groupadd --gid $USER_GID $USER_NAME \

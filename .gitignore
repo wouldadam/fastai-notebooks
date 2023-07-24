@@ -1,4 +1,5 @@
 /.fastai
 /.hypothesis
 /.ipynb_checkpoints
+/.precommit
 /.torch
