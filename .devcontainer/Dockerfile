@@ -11,6 +11,7 @@ ENV PRE_COMMIT_HOME=/workspaces/fastai/.precommit
 # Install python libs
 RUN pip install fastai nbdev fastbook ipywidgets
 RUN pip install black flake8 pre-commit
+RUN pip install duckduckgo_search gradio
 
 # Create a non-root user with sudo
 RUN groupadd --gid $USER_GID $USER_NAME \
@@ -19,6 +20,10 @@ RUN groupadd --gid $USER_GID $USER_NAME \
     && apt-get install -y sudo \
     && echo $USER_NAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USER_NAME \
     && chmod 0440 /etc/sudoers.d/$USER_NAME
+
+# Install packages
+RUN apt-get update \
+    && apt-get install git-lfs
 
 # Mess with juptyer permissions and install yarn otherwise the extension manager cli is unhappy
 SHELL [ "/bin/bash", "--login", "-c" ]
