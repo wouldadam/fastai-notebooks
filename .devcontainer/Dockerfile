@@ -11,7 +11,7 @@ ENV PRE_COMMIT_HOME=/workspaces/fastai/.precommit
 # Install python libs
 RUN pip install fastai nbdev fastbook ipywidgets
 RUN pip install black flake8 pre-commit
-RUN pip install duckduckgo_search gradio
+RUN pip install duckduckgo_search gradio timm
 
 # Create a non-root user with sudo
 RUN groupadd --gid $USER_GID $USER_NAME \
