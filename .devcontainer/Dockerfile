@@ -1,4 +1,4 @@
-FROM "nvcr.io/nvidia/pytorch:23.06-py3"
+FROM "nvcr.io/nvidia/pytorch:23.08-py3"
 
 ARG USER_NAME=vscode
 ARG USER_UID=1000
@@ -12,6 +12,10 @@ ENV PRE_COMMIT_HOME=/workspaces/fastai/.precommit
 RUN pip install fastai nbdev fastbook ipywidgets
 RUN pip install black flake8 pre-commit
 RUN pip install duckduckgo_search gradio timm
+RUN pip install transformers[torch]
+
+# Temp workaround for issue with preinstalled transformer-engine undefined symbols
+pip uninstall transformer-engine
 
 # Create a non-root user with sudo
 RUN groupadd --gid $USER_GID $USER_NAME \
