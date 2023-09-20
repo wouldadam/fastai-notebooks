@@ -27,7 +27,7 @@ RUN groupadd --gid $USER_GID $USER_NAME \
 
 # Install packages
 RUN apt-get update \
-    && apt-get install git-lfs
+    && apt-get install git-lfs graphviz
 
 # Mess with juptyer permissions and install yarn otherwise the extension manager cli is unhappy
 SHELL [ "/bin/bash", "--login", "-c" ]
