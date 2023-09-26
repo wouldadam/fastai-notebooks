@@ -13,6 +13,7 @@ RUN pip install fastai nbdev fastbook ipywidgets
 RUN pip install black flake8 pre-commit
 RUN pip install duckduckgo_search gradio timm
 RUN pip install transformers[torch]
+RUN pip install diffusers fastcore
 
 # Temp workaround for issue with preinstalled transformer-engine undefined symbols
 pip uninstall transformer-engine
