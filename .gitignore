@@ -3,3 +3,9 @@
 /.ipynb_checkpoints
 /.precommit
 /.torch
+/data/mnist
+/data/ollyornot
+/data/olly_small
+
+.ipynb_checkpoints
+checkpoint-*
