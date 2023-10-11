@@ -14,15 +14,15 @@ import fastcore.all as fc
 
 # %% ../14-huggingface-datasets.ipynb 19
 @fc.delegates(plt.Axes.imshow)  # kwargs is going to imshow
-def show_image(img, ax=None, figsize=None, title=None, **kwargs):
+def show_image(img, ax=None, figsize=None, title=None, noframe=True, **kwargs):
     """Show A PIL or PyTorch image on 'ax'."""
 
     # If its on the GPU copy to CPU
     if fc.hasattrs(img, ("cpu", "permute")):
-        img = img.cpu()
+        img = img.detach().cpu()
 
         # Ensure correct axis order
-        if img.shape[0] < 5:
+        if len(img.shape) == 3 and img.shape[0] < 5:
             img = img.permute(1, 2, 0)
     elif not isinstance(img, np.ndarray):
         # If not a numpy array make it one
@@ -40,7 +40,8 @@ def show_image(img, ax=None, figsize=None, title=None, **kwargs):
     if title is not None:
         ax.set_title(title)
 
-    ax.axis("off")  # Remove axis ticks
+    if noframe:
+        ax.axis("off")  # Remove axis ticks
     return ax
 
 
