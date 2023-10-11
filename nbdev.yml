@@ -1,0 +1,9 @@
+project:
+  output-dir: docs
+
+website:
+  title: "fastai-notebooks"
+  site-url: "https://wouldadam.github.io/fastai-notebooks"
+  description: "Notebooks created when going through the fastai course and book."
+  repo-branch: main
+  repo-url: "https://github.com/wouldadam/fastai-notebooks"

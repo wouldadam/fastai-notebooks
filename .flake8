@@ -2,3 +2,4 @@
 select = C,E,F,W,B,B950
 max-line-length = 120
 extend-ignore = E501
+exclude = miniai setup.py
