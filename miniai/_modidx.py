@@ -14,6 +14,18 @@ d = {
             "miniai.datasets.show_image": ("14-huggingface-datasets.html#show_image", "miniai/datasets.py"),
             "miniai.datasets.show_images": ("14-huggingface-datasets.html#show_images", "miniai/datasets.py"),
             "miniai.datasets.subplots": ("14-huggingface-datasets.html#subplots", "miniai/datasets.py"),
-        }
+        },
+        "miniai.training": {
+            "miniai.training.Dataset": ("14-minibatch-training.html#dataset", "miniai/training.py"),
+            "miniai.training.Dataset.__getitem__": (
+                "14-minibatch-training.html#dataset.__getitem__",
+                "miniai/training.py",
+            ),
+            "miniai.training.Dataset.__init__": ("14-minibatch-training.html#dataset.__init__", "miniai/training.py"),
+            "miniai.training.Dataset.__len__": ("14-minibatch-training.html#dataset.__len__", "miniai/training.py"),
+            "miniai.training.accuracy": ("14-minibatch-training.html#accuracy", "miniai/training.py"),
+            "miniai.training.fit": ("14-minibatch-training.html#fit", "miniai/training.py"),
+            "miniai.training.get_dls": ("14-minibatch-training.html#get_dls", "miniai/training.py"),
+        },
     },
 }
