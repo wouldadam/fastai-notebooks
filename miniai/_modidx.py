@@ -16,6 +16,7 @@ d = {
         },
         "miniai.datasets": {
             "miniai.datasets.get_grid": ("14-huggingface-datasets.html#get_grid", "miniai/datasets.py"),
+            "miniai.datasets.inplace": ("14-huggingface-datasets.html#inplace", "miniai/datasets.py"),
             "miniai.datasets.show_image": ("14-huggingface-datasets.html#show_image", "miniai/datasets.py"),
             "miniai.datasets.show_images": ("14-huggingface-datasets.html#show_images", "miniai/datasets.py"),
             "miniai.datasets.subplots": ("14-huggingface-datasets.html#subplots", "miniai/datasets.py"),
