@@ -15,6 +15,7 @@ d = {
             "miniai.conv.to_device": ("15-convolutions.html#to_device", "miniai/conv.py"),
         },
         "miniai.datasets": {
+            "miniai.datasets.collate_dict": ("14-huggingface-datasets.html#collate_dict", "miniai/datasets.py"),
             "miniai.datasets.get_grid": ("14-huggingface-datasets.html#get_grid", "miniai/datasets.py"),
             "miniai.datasets.inplace": ("14-huggingface-datasets.html#inplace", "miniai/datasets.py"),
             "miniai.datasets.show_image": ("14-huggingface-datasets.html#show_image", "miniai/datasets.py"),
