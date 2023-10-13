@@ -9,6 +9,11 @@ d = {
         "lib_path": "miniai",
     },
     "syms": {
+        "miniai.conv": {
+            "miniai.conv.collate_device": ("15-convolutions.html#collate_device", "miniai/conv.py"),
+            "miniai.conv.conv": ("15-convolutions.html#conv", "miniai/conv.py"),
+            "miniai.conv.to_device": ("15-convolutions.html#to_device", "miniai/conv.py"),
+        },
         "miniai.datasets": {
             "miniai.datasets.get_grid": ("14-huggingface-datasets.html#get_grid", "miniai/datasets.py"),
             "miniai.datasets.show_image": ("14-huggingface-datasets.html#show_image", "miniai/datasets.py"),
